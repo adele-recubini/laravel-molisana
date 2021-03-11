@@ -150,12 +150,12 @@
 
 
 
-      <h1>{{$array['titolo']}}</h1>
-      <img src='{{$array['src-h']}}' alt="">
-      <img src='{{$array['src-p']}}' alt="">
-      <h6>{{$array['descrizione']}}</h6>
 
-
+      @foreach ($array as $item)
+        <img src='{{$item['src-h']}}' alt="">
+        <img src='{{$item['src-p']}}' alt="">
+        <h6>{{$item['descrizione']}}</h6>
+      @endforeach
 
 
 
