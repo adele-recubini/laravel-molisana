@@ -4,11 +4,13 @@
         $lista = ['Home', 'Prodotti', 'News'];
     @endphp
 
+   <div class="logo">
     <img src="img/logo.png" alt="">
+   </div>
 
-    <nav class="header">
+    <div class="header">
         @foreach ($lista as $link)
-            <div><a href="#">{{$link}}</a></div>
+            <a href="#">{{$link}}</a>
         @endforeach
-    </nav>
+    </div>
 </header>
