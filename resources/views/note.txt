@@ -1,0 +1,4 @@
+carica il database nella tua pagina page.blade.php
+in questa oagina includerei due componenti che saranno il tuo header e il tuo footer che trovi in dettagli componenti
+
+la prima rotta srà quinsi page.in routes
