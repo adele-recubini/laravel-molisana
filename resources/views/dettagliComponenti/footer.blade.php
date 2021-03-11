@@ -28,7 +28,7 @@
         ];
     @endphp
 
-    <div class="uno">
+    <div class="item">
         <div><img src="https://www.lamolisana.it/wp-content/uploads/2020/04/marchio-sito-test.png" alt=""></div>
         Ragione sociale: La Molisana S.P.A. <br>
         Sede Legale: Contrada Colle delle Api, 100/A <br>
@@ -43,7 +43,7 @@
         telefono 3801292455
     </div>
 
-    <div class="due">
+    <div class="item">
         <h2>PASTIFICIO</h2>
         @foreach ($unoLink as $link)
             <div><a href="#">{{$link}}</a></div>
@@ -55,7 +55,7 @@
         @endforeach
     </div>
 
-    <div class="tre">
+    <div class="item">
         <h2>COLLEZIONE DA CHEF</h2>
         @foreach ($treLink as $link)
             <div><a href="#">{{$link}}</a></div>

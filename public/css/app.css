@@ -3,7 +3,9 @@
   margin: 0 auto;
 }
 
-body {
+main {
+  margin: 0 auto;
+  text-align: center;
   background-image: url("/img/sfondo.jpg");
 }
 
@@ -21,4 +23,15 @@ body {
   text-decoration: none;
   font-size: 30px;
   color: black;
+}
+
+footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+footer .item {
+  width: 20%;
+  line-height: 25PX;
+  margin-top: 20px;
 }

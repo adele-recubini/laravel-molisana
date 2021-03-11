@@ -158,6 +158,7 @@
 
         <div class="container">
 
+
         @foreach ($array as $item)
             @if ($item['tipo'] === 'corta')
                 <img src='{{$item['src']}}' alt="">
@@ -172,6 +173,7 @@
         @foreach ($array as $item)
             @if ($item['tipo'] === 'cortissima')
                 <img src='{{$item['src']}}' alt="">
+
             @endif
         @endforeach
 
@@ -181,5 +183,7 @@
 {{-- qui includo il mio footer --}}
     @include('dettagliComponenti.footer')
 {{-- fine  --}}
+
+<img src="img/logo-footer.jpg" alt="">
 </body>
 </html>

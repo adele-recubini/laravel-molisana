@@ -24,6 +24,6 @@ Route::get('/', function () {
 /*
 la seconda route sarà quella in cui per ogni click alle varie tipologie ciclerò il mio data iniziale dandogli l indice e quindi da solo per ogni link cliccato ciclerà l array . l array ciclato sarà nella mia seconda view cioe prodotti.blade.php
 */
-Route::get('/prodotti/{id}', function ($id) {
-    return view('prodotti' , ['idprodotto' => $id]);
+Route::get('/product/{id}', function ($id) {
+    return view('prodotti' , ['idProduct' => $id]);
 });
