@@ -1,3 +1,6 @@
+{{$idprodotto}}
+
+{{-- dovro ciclare lo stesso array in modo tale che mi prenda l index che ho passato nella funzione della routes , pero posso riutilizzare inlcudendoli lo stesso header e lo stesso footer--}}
 
       @php
         $data = '[
@@ -126,60 +129,41 @@
         $array = json_decode($data, true);
       @endphp
 
+      <!DOCTYPE html>
+      <html lang="en">
+      <head>
+          <meta charset="UTF-8">
+          <meta name="viewport" content="width=device-width, initial-scale=1.0">
+          <meta http-equiv="X-UA-Compatible" content="ie=edge">
+          <link rel="stylesheet" href="{{asset('css/app.css')}}">
+          <title>titolo</title>
+      </head>
+      <body>
+      {{-- qui includo il mio header vedi dettagli.componenti --}}
+          @include('dettagliComponenti.header')
+      {{-- fine  --}}
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="{{asset('css/app.css')}}">
-    <title>titolo</title>
-</head>
-<body>
-{{-- qui includo il mio header vedi dettagli.componenti --}}
-    @include('dettagliComponenti.header')
-{{-- fine  --}}
-
-    <main>
-        <h3>LE LUNGHE</h3>
-
-
-        <div class="container">
-
-        @foreach ($array as $item)
-            @if ($item['tipo'] === 'lunga')
-                <img src='{{$item['src']}}' alt="">
-            @endif
-        @endforeach
-
-        <h3>LE CORTE</h3>
+          <main>
+     {{--qui ciclo il mio array --}}
 
 
-        <div class="container">
+              <div class="container">
 
-        @foreach ($array as $item)
-            @if ($item['tipo'] === 'corta')
-                <img src='{{$item['src']}}' alt="">
-            @endif
-        @endforeach
+              @foreach ($array as $item)
 
-        <h3>LE CORTISSIME</h3>
+                      <h1>{{$item['titolo']}}</h1>
+                      <img src='{{$item['src-h']}}' alt="">
+                      <img src='{{$item['src-p']}}' alt="">
+                      <h6>{{$item['descrizione']}}</h6>
 
-
-        <div class="container">
-
-        @foreach ($array as $item)
-            @if ($item['tipo'] === 'cortissima')
-                <img src='{{$item['src']}}' alt="">
-            @endif
-        @endforeach
+              @endforeach
 
 
-    </main>
 
-{{-- qui includo il mio footer --}}
-    @include('dettagliComponenti.footer')
-{{-- fine  --}}
-</body>
-</html>
+          </main>
+
+      {{-- qui includo il mio footer --}}
+          @include('dettagliComponenti.footer')
+      {{-- fine  --}}
+      </body>
+      </html>
