@@ -21,13 +21,16 @@ la prima route è la mia pagina iniziale
 Route::get('/', function () {
   $pasta = config('pasta');
 
-    return view('page', [
-      'array' =>$pasta
-    ]);
+    return view('page',
+    ['array' =>$pasta]
+  );
 });
 
 Route::get('/product/{id}', function($id) {
+  $pasta = config('pasta');
+
     return view('product',
+     
      ['idProduct' => $id]
    );
 });
