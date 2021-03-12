@@ -1,6 +1,3 @@
-{{$idprodotto}}
-
-{{-- dovro ciclare lo stesso array in modo tale che mi prenda l index che ho passato nella funzione della routes , pero posso riutilizzare inlcudendoli lo stesso header e lo stesso footer--}}
 
       @php
         $data = '[
@@ -135,34 +132,24 @@
       <head>
           <meta charset="UTF-8">
           <meta name="viewport" content="width=device-width, initial-scale=1.0">
-          <meta http-equiv="X-UA-Compatible" content="ie=edge">
           <link rel="stylesheet" href="{{asset('css/app.css')}}">
           <title>titolo</title>
       </head>
       <body>
-      {{-- qui includo il mio header vedi dettagli.componenti --}}
+
           @include('dettagliComponenti.header')
-      {{-- fine  --}}
-
           <main>
-     {{--qui ciclo il mio array --}}
 
+         <div class="container">
+          <h3>{{$array[$idProduct]["titolo"]}}</h3>
+          <img src="{{$array[$idProduct]["src-p"]}}" alt="">
+          <img src="{{$array[$idProduct]["src-h"]}}" alt="">
+         <p>{{$array[$idProduct]["descrizione"]}}</p>
+        </div>
 
+        </main>
 
-
-
-      @foreach ($array as $item)
-        <img src='{{$item['src-h']}}' alt="">
-        <img src='{{$item['src-p']}}' alt="">
-        <h6>{{$item['descrizione']}}</h6>
-      @endforeach
-
-
-
-          </main>
-
-      {{-- qui includo il mio footer --}}
           @include('dettagliComponenti.footer')
-      {{-- fine  --}}
+
       </body>
       </html>

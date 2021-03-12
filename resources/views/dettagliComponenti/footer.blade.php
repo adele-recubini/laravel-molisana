@@ -65,3 +65,6 @@
 
 
 </footer>
+
+
+<img src="img/logo-footer.jpg" alt="">
