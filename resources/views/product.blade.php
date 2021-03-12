@@ -13,11 +13,10 @@
           <main>
 
          <div class="container">
-          <h3>{{$array[$idProduct]["titolo"]}}</h3>
-          <img src="{{$array[$idProduct]["src-p"]}}" alt="">
-          <img src="{{$array[$idProduct]["src-h"]}}" alt="">
-         <p>{{$array[$idProduct]["descrizione"]}}</p>
-        </div>
+             <h3>{{$product["titolo"]}}</h3>
+             <img src="{{$product["src-h"]}}" alt="">
+             <p>{{$product["descrizione"]}}</p>
+         </div>
 
         </main>
 
