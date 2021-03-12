@@ -30,7 +30,20 @@ Route::get('/product/{id}', function($id) {
   $pasta = config('pasta');
 
     return view('product',
-     
+
      ['idProduct' => $id]
    );
+});
+
+/*
+se l id che passo non esiste rindirizzami alla pagina iniziale con tutte le paste
+*/
+
+Route::get('/product/{id?}', function($id = null) {
+    if(empty($id)) {
+        return redirect('/');
+    }
+    return view('product',
+        ['idProduct' => $id]
+    );
 });
