@@ -24,4 +24,4 @@
           @include('dettagliComponenti.footer')
 
       </body>
-      </html>
+    </html>

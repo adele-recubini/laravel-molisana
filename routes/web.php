@@ -26,7 +26,7 @@ Route::get('/', function () {
   );
 });
 
-/*Route::get('/product/{id}', function($id) {
+Route::get('/product/{id}', function($id) {
   $pasta = config('pasta');
 
     return view('product',
@@ -34,7 +34,7 @@ Route::get('/', function () {
      ['array' => $pasta]
    );
 });
-*/
+
 
 
 
@@ -52,7 +52,7 @@ Route::get('/product/{id}', function($id) {
 });
 
 /*
-se l id che passo non esiste rindirizzami alla pagina iniziale con tutte le paste
+se l id che passo non esiste rindirizzami alla pagina iniziale con tutte le paste altrimenti fammi vedere i dettagli della singola pasta
 */
 
 Route::get('/product/{id?}', function($id = null) {

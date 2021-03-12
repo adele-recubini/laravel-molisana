@@ -17,7 +17,7 @@
         <div class="container">
       @foreach ($array as $id =>$item)
         @if ($item['tipo'] === 'lunga')
-        <a href="/product/{{$id}}"><img src='{{$item['src']}}' alt=""></a>
+        <a href="/product/{{$id}}"><img src="{{$item['src']}}" alt=""></a>
           @endif
         @endforeach
 
@@ -25,7 +25,7 @@
         <div class="container">
           @foreach ($array as $id =>$item)
           @if ($item['tipo'] === 'corta')
-            <a href="/product/{{$id}}"><img src='{{$item['src']}}' alt=""></a>
+            <a href="/product/{{$id}}"><img src="{{$item['src']}}" alt=""></a>
           @endif
         @endforeach
 
@@ -34,7 +34,7 @@
         <div class="container">
           @foreach ($array as $id =>$item)
           @if ($item['tipo'] === 'cortissima')
-            <a href="/product/{{$id}}"><img src='{{$item['src']}}' alt=""></a>
+            <a href="/product/{{$id}}"><img src="{{$item['src']}}" alt=""></a>
           @endif
         @endforeach
 
