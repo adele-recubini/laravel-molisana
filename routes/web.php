@@ -26,6 +26,22 @@ Route::get('/', function () {
   );
 });
 
+/*Route::get('/product/{id}', function($id) {
+  $pasta = config('pasta');
+
+    return view('product',
+
+     ['array' => $pasta]
+   );
+});
+*/
+
+
+
+
+/*
+la seconda route è la pagina che reindirizza sui vari prodotti
+*/
 Route::get('/product/{id}', function($id) {
   $pasta = config('pasta');
 
