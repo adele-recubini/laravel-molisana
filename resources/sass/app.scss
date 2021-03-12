@@ -33,6 +33,18 @@ main{
 
   }
 }
+// main
+.container{
+  width: 80%;
+
+
+  &>a>img{
+    width: 30%;
+    border: 1px solid black;
+  }
+}
+
+// fine main
 
 
 // footer
@@ -42,11 +54,19 @@ footer{
   display: flex;
   flex-direction: row;
   justify-content:space-around;
+
   .item{
   width: 20%;
   line-height: 25PX;
   margin-top: 20px;
+  color: black;
 
+  &>a{
+   text-decoration: none;
+    color: black;
+
+
+  }
 }
 }
 

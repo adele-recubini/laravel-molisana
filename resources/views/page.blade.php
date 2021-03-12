@@ -12,32 +12,32 @@
     @include('dettagliComponenti.header')
 {{-- fine  --}}
 
-  <main>
-      <h3>LE LUNGHE</h3>
-        <div class="container">
-      @foreach ($array as $id =>$item)
-        @if ($item['tipo'] === 'lunga')
+  <main><br>
+      <h3>LE LUNGHE</h3><br>
+        <div class="container"><br>
+         @foreach ($array as $id =>$item)
+         @if ($item['tipo'] === 'lunga')
         <a href="/product/{{$id}}"><img src="{{$item['src']}}" alt=""></a>
           @endif
         @endforeach
-
-     <h3>LE CORTE</h3>
+      </div>
+     <h3>LE CORTE</h3><br>
         <div class="container">
           @foreach ($array as $id =>$item)
           @if ($item['tipo'] === 'corta')
             <a href="/product/{{$id}}"><img src="{{$item['src']}}" alt=""></a>
           @endif
         @endforeach
+      </div><br><br>
 
-
-      <h3>LE CORTISSIME</h3>
+      <h3>LE CORTISSIME</h3><br>
         <div class="container">
           @foreach ($array as $id =>$item)
           @if ($item['tipo'] === 'cortissima')
-            <a href="/product/{{$id}}"><img src="{{$item['src']}}" alt=""></a>
+            <a href="/product/{{$id}}"><img src="{{$item['src']}}" class="poster" alt=""></a>
           @endif
         @endforeach
-
+      </div>
     </main>
 
 {{-- qui includo il mio footer --}}

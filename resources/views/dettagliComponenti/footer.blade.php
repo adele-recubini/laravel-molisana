@@ -44,21 +44,21 @@
     </div>
 
     <div class="item">
-        <h2>PASTIFICIO</h2>
+        <h2>PASTIFICIO</h2><br>
         @foreach ($unoLink as $link)
-            <div><a href="#">{{$link}}</a></div>
+          <a href="#">{{$link}}</a><br>
         @endforeach
-
-        <h2>PRODOTTI</h2>
+<br>
+        <h2>PRODOTTI</h2><br>
         @foreach ($dueLink as $link)
-            <div><a href="#">{{$link}}</a></div>
+            <a href="#">{{$link}}</a><br>
         @endforeach
-    </div>
+    </div><br>
 
     <div class="item">
-        <h2>COLLEZIONE DA CHEF</h2>
+        <h2>COLLEZIONE DA CHEF</h2><br>
         @foreach ($treLink as $link)
-            <div><a href="#">{{$link}}</a></div>
+            <a href="#">{{$link}}</a><br>
         @endforeach
     </div>
 

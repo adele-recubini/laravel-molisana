@@ -25,6 +25,14 @@ main {
   color: black;
 }
 
+.container {
+  width: 80%;
+}
+.container > a > img {
+  width: 30%;
+  border: 1px solid black;
+}
+
 footer {
   display: flex;
   flex-direction: row;
@@ -34,4 +42,9 @@ footer .item {
   width: 20%;
   line-height: 25PX;
   margin-top: 20px;
+  color: black;
+}
+footer .item > a {
+  text-decoration: none;
+  color: black;
 }
